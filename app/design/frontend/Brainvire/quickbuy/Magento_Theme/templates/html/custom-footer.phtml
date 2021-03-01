@@ -1,0 +1,36 @@
+<head>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div id="full-width-footer-outer" class="container-fluid" style="background-color: #293991;">
+   <div id="footer-inner" class="container">
+      <div class="row">
+         <div style="overflow-x:auto;">
+            <table class="table myclass">
+               <style>.myclass ul > li {list-style:none;} .myclass li>a {color:#ffffff;} .myclass h3 {color:#ffffff;} .myclass li > a:hover{color:#f61a17;text-decoration: none;}</style>
+               <tr>
+                  <td>
+                     <div class="col-md-3">
+                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_col_1')->toHtml();?>
+                     </div>
+                  </td>
+                  <td>
+                     <div class="col-md-3">
+                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_col_2')->toHtml();?>
+                     </div>
+                  </td>
+                  <td>
+                     <div class="col-md-3">
+                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_col_3')->toHtml();?>
+                     </div>
+                  </td>
+                  <td>
+                     <div class="col-md-3">
+                        <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_col_4')->toHtml();?>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </div>
+</div>

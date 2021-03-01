@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    <add id="Brainvire_ContactBook::contactbook" title="Contact Book" module="Brainvire_ContactBook" sortOrder="51" resource="Brainvire_ContactBook::contactbook"/>
+    <add id="Brainvire_ContactBook::contacts" title="Manage Contacts" module="Brainvire_ContactBook" sortOrder="10" action="brainvire_contactbook/contacts" resource="Brainvire_ContactBook::contacts" parent="Brainvire_ContactBook::contactbook"/>
+    </menu>
+</config>

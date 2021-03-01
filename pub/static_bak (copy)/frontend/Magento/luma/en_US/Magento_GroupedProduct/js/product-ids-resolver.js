@@ -1,0 +1,1 @@
+/home/jigar_karangiya/htdocs/magento/vendor/magento/module-grouped-product/view/frontend/web/js/product-ids-resolver.js

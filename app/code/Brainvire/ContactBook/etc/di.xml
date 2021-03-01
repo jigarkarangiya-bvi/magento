@@ -1,0 +1,17 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="brainvire_contactbook_contacts_listing_data_source" xsi:type="string">Brainvire\ContactBook\Model\ResourceModel\Contacts\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Brainvire\ContactBook\Model\ResourceModel\Contacts\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">brainvire_contactbook_contacts</argument>
+            <argument name="resourceModel" xsi:type="string">Brainvire\ContactBook\Model\ResourceModel\Contacts</argument>
+        </arguments>
+    </virtualType>
+    <preference for="Brainvire\ContactBook\Api\ContactBookManagementInterface" type="Brainvire\ContactBook\Model\Api\ContactBookManagement" />
+    <preference for="Brainvire\ContactBook\Api\Data\ContactBookInterface" type="Brainvire\ContactBook\Model\ContactBook" />
+</config>

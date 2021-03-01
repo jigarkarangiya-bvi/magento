@@ -1,0 +1,9 @@
+<?php
+$collection = $block->getProducts();
+
+foreach ($collection as $product) {
+    echo "<pre>";
+    print_r($product->getData());
+    //echo $product->getName() . '<br />';
+    //echo $product->getName() . ' - ' . $product->getProductUrl() . '<br />';
+}

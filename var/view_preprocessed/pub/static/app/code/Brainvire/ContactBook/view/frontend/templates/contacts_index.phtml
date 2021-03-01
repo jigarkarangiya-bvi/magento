@@ -1,0 +1,1 @@
+<?php $contacts = $this->getContacts(); ?> <div id="contacts_list"><h2>empty</h2><table>html/ <tr><th>Name</th><th>Mobile Number</th></tr><?php foreach ($contacts as $contact): ?> <tr><td><?php echo $contact->getContactId('contact_id'); ?> ?></td><td><?php echo $contact->getMobNum(); ?></td></tr><?php endforeach; ?> <tr><td>there is no contact in this list</td></tr></table></div>

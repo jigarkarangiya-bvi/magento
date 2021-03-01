@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- test api Group -->
+    <route url="/V1/contactbook/contacts/get" method="GET">
+        <service class="Brainvire\ContactBook\Api\ContactBookManagementInterface" method="getApiData"/>
+        <resources>
+            <resource ref="anoynmous"/>
+        </resources>
+        <data>
+            <parameter name="contact_id" force="true">contact_id</parameter>
+        </data>
+    </route>
+</routes>

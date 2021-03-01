@@ -1,0 +1,1 @@
+/home/jigar_karangiya/htdocs/magento/vendor/magento/module-bundle/view/frontend/web/js/slide.js

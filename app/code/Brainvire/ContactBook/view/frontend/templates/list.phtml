@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <th>
+            <?= __("Id")?>
+        </th>
+        <th>
+            <?= __("Name")?>
+        </th>
+        <th>
+            <?= __("Mobile Number")?>
+        </th>
+    </tr>
+    <?php
+    $contacts = $block->getContacts();
+
+    foreach ($contacts as $contact) {?>
+    <tr>
+        <td>
+            <?= $contact->getContactId()?>
+        </td>
+        <td>
+            <?= $contact->getName()?>
+        </td>
+        <td>
+            <?= $contact->getMobNum()?>
+        </td>
+    </tr>
+    <?php } ?>
+</table>

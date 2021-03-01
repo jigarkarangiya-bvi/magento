@@ -1,0 +1,1 @@
+/home/jigar_karangiya/htdocs/magento/vendor/magento/module-swagger/view/frontend/web/swagger-ui/js/magento-swagger.js

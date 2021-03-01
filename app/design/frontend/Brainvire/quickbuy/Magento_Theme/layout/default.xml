@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/qb-logo-final.png</argument>
+                <argument name="logo_alt" xsi:type="string">Quickbuy</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="header.links">
+            <!-- Contact us Link -->
+            <block class="Magento\Framework\View\Element\Html\Link" name="contactus.link" after="md_hello_world.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Contact Us</argument>
+                    <argument name="path" xsi:type="string" translate="false">contact</argument>
+                </arguments>
+            </block>
+            <!-- CMS Page Link Link -->
+            <block class="Magento\Framework\View\Element\Html\Link" name="aboutus.link" after="contactus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">About Us</argument>
+                    <argument name="path" xsi:type="string" translate="false">about-us</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="blog.link" after="aboutus.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Blog</argument>
+                    <argument name="path" xsi:type="string" translate="false">blog</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="shippinginformation.link" after="blog.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Shipping Information</argument>
+                    <argument name="path" xsi:type="string" translate="false">shipping-information</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="termsandcondition.link" after="shippinginformation.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Terms and Conditions</argument>
+                    <argument name="path" xsi:type="string" translate="false">terms-and-conditions</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="financing.link" after="termsandcondition.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Financing</argument>
+                    <argument name="path" xsi:type="string" translate="false">financing</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link" name="md_hello_world.link" after="financing.link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">My Module</argument>
+                    <argument name="path" xsi:type="string" translate="false">helloworld/index/index/</argument>
+                </arguments>
+            </block>
+            <!--  Removed Blocks -->
+            <!-- <referenceBlock name="register-link" remove="true" />
+            <referenceBlock name="authorization-link-login" remove="true" />
+            <referenceBlock name="authorization-link" remove="true" />
+            <referenceBlock name="wish-list-link" remove="true" />
+            <referenceBlock name="my-account-link" remove="false" /> -->
+        </referenceBlock>
+        <referenceContainer name="category.view.container">
+            <block class="Magento\Cms\Block\Block" name="discount-offer-block" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">discount-offer-block</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <block class="Magento\Theme\Block\Html\Footer" name="footer" template="html/custom-footer.phtml" />
+        </referenceContainer>
+    </body>
+</page>

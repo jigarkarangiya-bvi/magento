@@ -1,0 +1,1 @@
+/home/jigar_karangiya/htdocs/magento/vendor/magento/module-wishlist/view/frontend/web/js/wishlist.js

@@ -1,0 +1,1 @@
+/home/jigar_karangiya/htdocs/magento/vendor/magento/module-theme/view/frontend/web/js/model/breadcrumb-list.js
