@@ -11,7 +11,7 @@ interface ContactBookManagementInterface
      *
      * @param int $contact_id
      *
-     * @return \Brainvire\ContactBook\Api\Data\ContactBookManagementInterface
+     * @return \Brainvire\ContactBook\Api\ContactBookManagementInterface
      */
     public function getApiData($contact_id);
 }

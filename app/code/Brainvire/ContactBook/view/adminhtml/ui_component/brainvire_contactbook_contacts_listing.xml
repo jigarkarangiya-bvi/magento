@@ -27,10 +27,10 @@
 <filterSearch name="fulltext">
     <argument name="data" xsi:type="array">
         <item name="config" xsi:type="array">
-            <item name="provider" xsi:type="string">contactbook_contacts_listing.contactbook_contacts_listing_data_source</item>
-            <item name="chipsProvider" xsi:type="string">contactbook_contacts_listing.contactbook_contacts_listing.listing_top.listing_filters_chips</item>
+            <item name="provider" xsi:type="string">brainvire_contactbook_contacts_listing.brainvire_contactbook_contacts_listing_data_source</item>
+            <item name="chipsProvider" xsi:type="string">brainvire_contactbook_contacts_listing.brainvire_contactbook_contacts_listing.listing_top.listing_filters_chips</item>
             <item name="storageConfig" xsi:type="array">
-                <item name="provider" xsi:type="string">contactbook_contacts_listing.contactbook_contatcts_listing.listing_top.bookmarks</item>
+                <item name="provider" xsi:type="string">brainvire_contactbook_contacts_listing.brainvire_contactbook_contatcts_listing.listing_top.bookmarks</item>
                 <item name="namespace" xsi:type="string">current.search</item>
             </item>
         </item>
@@ -51,7 +51,19 @@
                         <item name="url" xsi:type="url" path="brainvire_contactbook/contacts/MassDelete"/>
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Delete Contact</item>
-                            <item name="message" xsi:type="string" translate="true">Are you sure you wan't to delete selected Contacts?</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to delete selected Contacts?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+            <action name="edit">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">edit</item>
+                        <item name="label" xsi:type="string" translate="true">Edit</item>
+                        <item name="callback" xsi:type="array">
+                            <item name="provider" xsi:type="string">brainvire_contactbook_contacts_listing.brainvire_contactbook_contacts_listing.columns_editor</item>
+                            <item name="target" xsi:type="string">editSelected</item>
                         </item>
                     </item>
                 </argument>
@@ -65,7 +77,7 @@
             <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
             <argument name="name" xsi:type="string">brainvire_contactbook_contacts_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">contact_id</argument>
-            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">contact_id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
@@ -78,6 +90,30 @@
         </argument>
     </dataSource>
     <columns name="spinner_columns">
+<argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="editorConfig" xsi:type="array">
+                    <item name="selectProvider" xsi:type="string">brainvire_contactbook_contacts_listing.brainvire_contactbook_contacts_listing.listing_columns.ids</item>
+                    <item name="enabled" xsi:type="boolean">true</item>
+                    <item name="indexField" xsi:type="string">contact_id</item>
+                    <item name="clientConfig" xsi:type="array">
+                        <item name="saveUrl" xsi:type="url" path="brainvire_contactbook/contacts/inlineEdit"/>
+                        <item name="validateBeforeSave" xsi:type="boolean">false</item>
+                    </item>
+                </item>
+                <item name="childDefaults" xsi:type="array">
+                    <item name="fieldAction" xsi:type="array">
+                        <item name="provider" xsi:type="string">brainvire_contactbook_contacts.contactbook_contacts.columns_editor</item>
+                        <item name="target" xsi:type="string">startEdit</item>
+                        <item name="params" xsi:type="array">
+                            <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                            <item name="1" xsi:type="boolean">true</item>
+                        </item>
+                    </item>
+                </item>
+            </item>
+        </argument>
+
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -100,13 +136,13 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Contact Name</item>
                     <item name="editor" xsi:type="array">
                         <item name="editorType" xsi:type="string">text</item>
                         <item name="validation" xsi:type="array">
                             <item name="required-entry" xsi:type="boolean">true</item>
                         </item>
                     </item>
-                    <item name="label" xsi:type="string" translate="true">Name</item>
                 </item>
             </argument>
         </column>
@@ -154,7 +190,4 @@
             </argument>
         </actionsColumn>
     </columns>
-
-    
-   
 </listing>
